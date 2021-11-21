@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Estonia&family=Seaweed+Script&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+
+.dataContainer{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  text-align: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heading{
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.subheading{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.subtitle{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.writeMessageSection{
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  
+
+}
+
+.inputMessage{
+  width: 100%;
+}
+
+
+.inputMessage{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.inputBox{
+  width: 80%;
+}
+
+.submitButton {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.submitBtn {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: 60%;
+  height: 4rem;
+  border:none;
+  cursor: pointer;
+  box-shadow: 0 0 50px rgb(255, 255, 255);
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #f77bd4 0%, #2d74ee 51%, #fbc2eb 100%);
+}
+.submitBtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.submitBtn:hover {
+  background-position: center center; /* change the direction of the change here */
+}
+
+.displayMessageSection{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.msgCardContent{
+  padding: 1rem;
+}
+
+.message{
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+.timestamp{
+  margin-top: 20px;
+}
+
+.sender{
+  margin-top: 25px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.msgCard{
+  background-color: #dcc1fa;
+  padding: 8px;
+  margin: 10px;
+  height: auto;
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(230, 243, 175); 
+
+  
+}
+
+
+.emoji {
+  font-family: "Segoe UI Emoji";
+}
+
+body {
+  animation-name: backgroundColorPalette;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes backgroundColorPalette {
+  0% {
+    background: #e0a7f7;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    background: #f19ad7;
+  }
+  50% {
+    background: #f07fca;
+  }
+  75% {
+    background: #6390f1;
+  }
+  100% {
+    background: #6237e0;
   }
 }
