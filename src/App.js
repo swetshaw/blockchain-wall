@@ -129,7 +129,7 @@ function App() {
   useEffect(() => {
     checkIfWalletIsConnected();
     getAllMessages();
-  }, []);
+  }, [currentAccount]);
 
   return (
     <div className='mainContainer'>
